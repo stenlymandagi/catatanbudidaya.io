@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Perkembangan Tanaman</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Laporan Perkembangan Tanaman di Lahan</h1>
+        <p>Update perkembangan tanaman berdasarkan perlakuan yang diberikan.</p>
+    </header>
+    
+    <main>
+        <section id="form-section">
+            <h2>Tambah Laporan Baru</h2>
+            <form id="report-form">
+                <label for="date">Tanggal:</label>
+                <input type="date" id="date" required>
+                
+                <label for="treatment">Perlakuan:</label>
+                <input type="text" id="treatment" placeholder="Contoh: Penyiraman, Pemupukan" required>
+                
+                <label for="development">Perkembangan Tanaman:</label>
+                <textarea id="development" placeholder="Contoh: Tanaman tumbuh 5 cm, daun hijau sehat" required></textarea>
+                
+                <button type="submit">Tambah Laporan</button>
+            </form>
+        </section>
+        
+        <section id="reports-section">
+            <h2>Daftar Laporan</h2>
+            <div id="export-buttons">
+             <button id="export-pdf">Generate PDF</button>
+             <button id="export-excel">Generate Excel</button>
+</div>
+            <ul id="reports-list"></ul>
+        </section>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
