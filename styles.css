@@ -70,3 +70,12 @@ li button {
 #export-buttons button {
     margin-right: 10px;
 }
+body {
+    font-family: Arial, sans-serif;
+}
+.card {
+    margin-bottom: 20px;
+}
+.navbar-brand {
+    font-weight: bold;
+}
