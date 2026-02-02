@@ -2,45 +2,35 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laporan Perkembangan Tanaman</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <title>Login - Manajemen Budidaya</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <header>
-        <h1>Laporan Perkembangan Tanaman di Lahan</h1>
-        <p>Update perkembangan tanaman berdasarkan perlakuan yang diberikan.</p>
-    </header>
-    
-    <main>
-        <section id="form-section">
-            <h2>Tambah Laporan Baru</h2>
-            <form id="report-form">
-                <label for="date">Tanggal:</label>
-                <input type="date" id="date" required>
-                
-                <label for="treatment">Perlakuan:</label>
-                <input type="text" id="treatment" placeholder="Contoh: Penyiraman, Pemupukan" required>
-                
-                <label for="development">Perkembangan Tanaman:</label>
-                <textarea id="development" placeholder="Contoh: Tanaman tumbuh 5 cm, daun hijau sehat" required></textarea>
-                
-                <button type="submit">Tambah Laporan</button>
-            </form>
-        </section>
-        
-        <section id="reports-section">
-            <h2>Daftar Laporan</h2>
-            <div id="export-buttons">
-             <button id="export-pdf">Generate PDF</button>
-             <button id="export-excel">Generate Excel</button>
-</div>
-            <ul id="reports-list"></ul>
-        </section>
-    </main>
-    
-    <script src="script.js"></script>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header text-center">Login</div>
+                    <div class="card-body">
+                        <form id="loginForm">
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Username</label>
+                                <input type="text" class="form-control" id="username" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Login</button>
+                        </form>
+                        <div id="error" class="text-danger mt-3" style="display:none;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="js/login.js"></script>
 </body>
 </html>
