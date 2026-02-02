@@ -2,7 +2,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
     e.preventDefault();
     const username = document.getElementById('username').value;
     const password = CryptoJS.MD5(document.getElementById('password').value).toString();
-    const response = await fetch('YOUR_WEB_APP_URL?method=login', {
+    const response = await fetch(https://stenlymandagi.github.io/catatanbudidaya.io/, {
         method: 'POST',
         body: JSON.stringify({ username, password })
     });
