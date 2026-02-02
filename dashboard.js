@@ -4,7 +4,7 @@ const user = JSON.parse(localStorage.getItem('user'));
 if (user.role !== 'admin') document.getElementById('settingsNav').style.display = 'none';
 
 // Fetch data untuk statistik
-fetch('YOUR_WEB_APP_URL?method=getStats')
+fetch(https://stenlymandagi.github.io/catatanbudidaya.io/?method=getStats')
     .then(res => res.json())
     .then(data => {
         document.getElementById('totalTanaman').textContent = data.totalTanaman;
